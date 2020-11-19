@@ -36,7 +36,7 @@ const styles =StyleSheet.create({
         flex: 1,
     },
     welcome:{
-        //fontFamily: 'Quattrocento-Regular',
+        fontFamily: 'Quattrocento-Regular',
         fontSize: 30,
         marginTop: 147,
         marginLeft: 53,
@@ -69,12 +69,12 @@ const styles =StyleSheet.create({
     },
     sebagaiText:{
         color: '#A2A19F',
-        //fontFamily: 'Poppins-Regular',
+        fontFamily: 'Poppins-Regular',
         fontSize: 12,
     },
     dokterText:{
         fontSize: 12,
-        //fontFamily: 'Poppins-Regular',
+        fontFamily: 'Poppins-Regular',
         fontWeight: 'bold',
         textDecorationLine: 'underline',
     },
@@ -88,6 +88,7 @@ const styles =StyleSheet.create({
     registerText:{
         color: '#161616',
         alignSelf: 'center',
+        fontFamily: 'Poppins-Regular',
         marginBottom: 10,
         marginTop: 10,
     }, 

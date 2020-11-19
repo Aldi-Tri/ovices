@@ -16,7 +16,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={RegisterDokter}
+        <Stack.Screen name="Home" component={HomePasien}
         options={{
           headerShown: false,
         }}
