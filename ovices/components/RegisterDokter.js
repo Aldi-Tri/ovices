@@ -1,27 +1,25 @@
 import * as React from 'react';
-import {ScrollView, TextInput, Text, StyleSheet, View, TouchableOpacity} from 'react-native';
+import {ScrollView, TouchableOpacity, Text, StyleSheet, View, TextInput} from 'react-native';
 import colors from '../assets/colors/colors';
 //import fonts from '../assets/fonts';
 
-export default LoginPasien = () =>{
+export default RegisterPasien = () =>{
     return (
         <ScrollView style={styles.container}>
             <Text style={styles.welcome}>Welcome !</Text>
             <View style={styles.email}>
                 <TextInput placeholder='Email'/>
             </View>
+            <View style={styles.nama}>
+                <TextInput placeholder='Nama'/>
+            </View>
             <View style={styles.password}>
                 <TextInput placeholder='Password' secureTextEntry={true}/>
             </View>
             <View style={styles.sebagai}>
-                <Text style={styles.sebagaiText}>Login sebagai </Text>
+                <Text style={styles.sebagaiText}>Register sebagai </Text>
                 <TouchableOpacity>
-                    <Text style={styles.dokterText}>Dokter</Text>
-                </TouchableOpacity>
-            </View>
-            <View>
-                <TouchableOpacity style={styles.login}>
-                    <Text style={styles.loginText}>Login</Text>
+                    <Text style={styles.pasienText}>Pasien</Text>
                 </TouchableOpacity>
             </View>
             <View>
@@ -45,7 +43,14 @@ const styles =StyleSheet.create({
     },
     email:{
         marginRight: 53,
-        marginTop: 120,
+        marginTop: 80,
+        marginLeft: 53,
+        borderBottomColor: colors.textLight,
+        borderBottomWidth: 2,
+    },
+    nama:{
+        marginRight: 53,
+        marginTop: 5,
         marginLeft: 53,
         borderBottomColor: colors.textLight,
         borderBottomWidth: 2,
@@ -67,23 +72,11 @@ const styles =StyleSheet.create({
         //fontFamily: 'Poppins-Regular',
         fontSize: 12,
     },
-    dokterText:{
+    pasienText:{
         fontSize: 12,
         //fontFamily: 'Poppins-Regular',
         fontWeight: 'bold',
         textDecorationLine: 'underline',
-    },
-    login:{
-        marginTop: 28,
-        marginHorizontal: 78,
-        backgroundColor: '#161616',
-        borderRadius: 15,
-    },
-    loginText:{
-        color: '#A2A19F',
-        alignSelf: 'center',
-        marginBottom: 10,
-        marginTop: 10,
     },
     register:{
         marginTop: 18,

@@ -1,38 +1,35 @@
 import * as React from 'react';
-import {Text, StyleSheet, View, Button} from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
+import {ScrollView, TouchableOpacity, Text, StyleSheet, View, TextInput} from 'react-native';
 import colors from '../assets/colors/colors';
 //import fonts from '../assets/fonts';
 
-export default LoginPasien = () =>{
+export default LoginDokter = () =>{
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <Text style={styles.welcome}>Welcome !</Text>
             <View style={styles.email}>
-                <Text style={styles.emailText}>Email</Text>
+                <TextInput placeholder='Email'/>
             </View>
             <View style={styles.password}>
-                <Text style={styles.passwordText}>Password</Text>
+                <TextInput placeholder='Password' secureTextEntry={true}/>
             </View>
             <View style={styles.sebagai}>
                 <Text style={styles.sebagaiText}>Masuk sebagai </Text>
-                <Text style={styles.pasienText}>Pasien</Text>
+                <TouchableOpacity>
+                    <Text style={styles.pasienText}>Pasien</Text>
+                </TouchableOpacity>
             </View>
-            <View style={styles.masuk}>
-            <Button style={styles}
-                //onPress={}
-                title="Masuk"
-                color="#161616"
-            />
+            <View>
+                <TouchableOpacity style={styles.login}>
+                    <Text style={styles.loginText}>Login</Text>
+                </TouchableOpacity>
             </View>
-            <View style={styles.register}>
-            <Button style={styles}
-                //onPress={}
-                title="Register"
-                color="#EFEFEF"
-            />
+            <View>
+                <TouchableOpacity style={styles.register}>
+                    <Text style={styles.registerText}>Register</Text>
+                </TouchableOpacity>
             </View>
-        </View>
+        </ScrollView>
     );
 };
 
@@ -53,20 +50,12 @@ const styles =StyleSheet.create({
         borderBottomColor: colors.textLight,
         borderBottomWidth: 2,
     },
-    emailText:{
-        fontSize: 12,
-        paddingBottom: 10,
-    },
     password:{
         marginRight: 53,
-        marginTop: 50,
+        marginTop: 5,
         marginLeft: 53,
         borderBottomColor: colors.textLight,
         borderBottomWidth: 2,
-    },
-    passwordText:{
-        fontSize: 12,
-        paddingBottom: 10,
     },
     sebagai:{
         flexDirection: 'row',
@@ -84,12 +73,29 @@ const styles =StyleSheet.create({
         fontWeight: 'bold',
         textDecorationLine: 'underline',
     },
-    masuk:{
-        marginHorizontal: 48,
-        paddingTop: 48,
+    login:{
+        marginTop: 28,
+        marginHorizontal: 78,
+        backgroundColor: '#161616',
+        borderRadius: 15,
+    },
+    loginText:{
+        color: '#A2A19F',
+        alignSelf: 'center',
+        marginBottom: 10,
+        marginTop: 10,
     },
     register:{
-        marginHorizontal: 48,
-        paddingTop: 20,
+        marginTop: 18,
+        marginHorizontal: 78,
+        borderRadius: 15,
+        borderColor: '#161616',
+        borderWidth: 1,
     },
+    registerText:{
+        color: '#161616',
+        alignSelf: 'center',
+        marginBottom: 10,
+        marginTop: 10,
+    }, 
 });

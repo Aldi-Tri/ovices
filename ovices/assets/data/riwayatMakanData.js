@@ -2,7 +2,7 @@ const riwayatMakanData = [
     {
         id: 1,
         title: 'nasi goreng',
-        time: '8 am',
+        time: '9 am',
         date: '10 nov',
         description: 'Aman, bla-bla',
     },
@@ -10,14 +10,14 @@ const riwayatMakanData = [
         id: 2,
         title: 'nasi goreng',
         time: '8 am',
-        date: '10 nov',
+        date: '16 nov',
         description: 'Aman, bla-bla',
     },
     {
         id: 3,
         title: 'nasi goreng',
-        time: '8 am',
-        date: '10 nov',
+        time: '6 am',
+        date: '17 nov',
         description: 'Aman, bla-bla',
     },
 ]
